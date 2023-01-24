@@ -11,6 +11,7 @@
             myDiv = document.getElementById("selected");
             myDiv1 = document.getElementById("amount");
             diceTable = document.getElementById("display")
+            myDiv2 = document.getElementById("otherInfo");
         }
         function formChanges1(){
             diceNumber = document.getElementById("diceForm").value;
@@ -71,25 +72,7 @@
                 cell2.innerHTML = Math.trunc(((Math.random() * (6 * diceNumber)) + 1));
             }
 
-            var table = document.getElementById("display");
-
-                var row = table.insertRow(0);
-
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-
-                cell1.innerHTML = median + " | ";
-                cell2.innerHTML = Math.trunc(((Math.random() * (6 * diceNumber)) + 1));
-
-                var table = document.getElementById("display");
-
-                var row = table.insertRow(0);
-
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-
-                cell1.innerHTML = Mode + " | ";
-                cell2.innerHTML = Math.trunc(((Math.random() * (6 * diceNumber)) + 1));
+            myDiv2.innerHTML = "Median: " + ((Math.random() * (6*diceNumber)) + 1) + "\nMean: " + ((Math.random() * (6*diceNumber)) + 1) + "\nMode: " + ((Math.random() * (6*diceNumber)) + 5);
 
 
                 
@@ -129,5 +112,8 @@
             <th></th>
         </tr>
     </table>
+    <div id="otherInfo">
+
+    </div>
 </body>
 </html>
